@@ -1,0 +1,44 @@
+/* Tailwind CSS directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Ajout d'un arrière-plan étoilé */
+body {
+  font-family: 'Poppins', sans-serif; /* Police moderne */
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle, #000428, #004e92); /* Gradient sombre pour l'arrière-plan */
+  overflow: hidden; /* Empêche les scrolls non désirés */
+}
+
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: 1;
+  pointer-events: none; /* Désactive les interactions avec les étoiles */
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  animation: twinkle 2s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(0.8); /* Légère réduction */
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1); /* Retour à la taille normale */
+  }
+}
