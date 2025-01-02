@@ -1,8 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"], // Analyse tous les fichiers React
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {}, // Ajout de personnalisations
+    extend: {
+      colors: {
+        brown: {
+          500: '#A0522D', // Marron pour "CryptoPay"
+        },
+      },
+    },
   },
-  plugins: [], // Ajout de plugins si nécessaire
+  plugins: [],
 };
